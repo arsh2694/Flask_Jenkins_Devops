@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return jsonify({
-        "message": "🚀 Welcome to FlaskApp AutoDeployer – Mini Dashboard API"
+        "message": "🚀 Welcome to FlaskApp AutoDeployer – Mini Dashboard API Version 2"
     })
 
 @app.route('/health')
@@ -43,4 +43,4 @@ def get_config():
     return jsonify(APP_CONFIG)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5001)
