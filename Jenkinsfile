@@ -26,7 +26,7 @@ pipeline {
         stage('✅ Run Unit Tests') {
             steps {
                 echo "🧪 Running unit tests..."
-                sh 'pytest'
+                sh 'python3 -m pytest'
             }
         }
 
