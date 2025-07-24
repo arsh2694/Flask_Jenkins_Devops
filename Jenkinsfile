@@ -1,5 +1,5 @@
 pipeline {
-    agent testing
+    agent any
 
     environment {
         IMAGE_NAME = 'flaskapp:latest'
