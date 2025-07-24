@@ -34,8 +34,8 @@ pipeline {
             steps {
                 echo "🧹 Stopping and removing any existing container..."
                 sh """
-                    podman stop $CONTAINER_NAME || true
-                    podman rm $CONTAINER_NAME || true
+                   sudo  podman stop $CONTAINER_NAME || true
+                   sudo podman rm $CONTAINER_NAME || true
                 """
             }
         }
@@ -43,14 +43,14 @@ pipeline {
         stage('🐳 Build Docker Image') {
             steps {
                 echo "🐳 Building Docker image..."
-                sh "podman build -t $IMAGE_NAME ."
+                sh "sudo podman build -t $IMAGE_NAME ."
             }
         }
 
         stage('🚀 Run Docker Container') {
             steps {
                 echo "🚀 Running Docker container..."
-                sh "podman run -d -p $APP_PORT:$APP_PORT --name $CONTAINER_NAME $IMAGE_NAME"
+                sh "sudo podman run -d -p $APP_PORT:$APP_PORT --name $CONTAINER_NAME $IMAGE_NAME"
             }
         }
     }
