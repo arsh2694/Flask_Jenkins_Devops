@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'flaskapp-autodeployer:latest'
+        IMAGE_NAME = 'flaskapp:latest'
         CONTAINER_NAME = 'flaskapp'
         APP_PORT = '5000'
     }
