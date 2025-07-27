@@ -12,7 +12,7 @@ pipeline {
         stage('📥 Clone Repository') {
             steps {
                 echo "🔄 Cloning Git repository..."
-                git branch: 'main', url: 'https://github.com/dilip8700/flask-jenkins-devops.git'
+                git branch: 'main', url: 'https://github.com/arsh2694/Flask_Jenkins_Devops.git'
             }
         }
 
